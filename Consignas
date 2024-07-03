@@ -1,0 +1,55 @@
+ EVALUACIÓN ESCRITA 03/07
+1-.¿para qué utilizamos git remote add origin? qué pasa si no lo utilizamos?
+
+2-.si bien ambos entran en el paso a paso del guardado, ¿cuál es la diferen
+cia entre git add y git push?
+
+3-. ¿por qué utilizamos git push origin main y no solo git push? a dónde 
+queremos enviar las cosas?
+
+4-.¿cuáles son los estados (3 colores) que puede tener un archivo?
+  RTA:
+ 
+1. Utilizamos el comando "git remote add origin" para añadir el link del
+repositorio hacia donde queremos subir el archivo o archivos.
+Este paso es importante ya que si no lo hacemos o lo hacemos mal no nos 
+dejara subir el archivo o se subira al link de repositorio anterior(que
+quedo el link), no al que deseamos. 
+Antes de hacerlo tenemos que fijarnos si habia un link de repositorio 
+anterior con "git remote -v", si tiene uno con "git remote remove origin"
+podemos borrar el link y agregar el nuestro.
+
+2. Si bien los 2 entran en el paso del guardado que son 3 o 4 comandos
+(git add, git commit, ""git branch"" y git push) no todos cumplen la misma 
+función.
+(el branch por si no hay rama main)
+el git add junto con el nombre del archivo, por si decirlo prepara el 
+archivo y le dice que archivos se van a subir al repositorio
+y lo selecciona para que luego cuando se ejecute se aplique sobre 
+ese archivo.
+El git push despues de hacer los anteriores pasos
+"git push origin main" ya sube los archivos a la nube, los archivos añadi-
+dos por git add, comiteado con git commit y habiendo hecho la rama main con
+branch.
+
+uno los prepara y otro los sube a la nube
+
+3. Utilizamos git add origin main en vez de git push ya que antes definimos
+origin que es el link de repositorio hacia donde subimos las cosas y el
+main es la rama del repositorio que vamos a subir el archivo.
+osea que git push, no le indicamos nada ! al no indicarle a QUE origin
+(link) y al main (rama).
+
+4. Nos podemos encontrar con 3 estados o colores al subir un archivo en git
+ Rojo, Verde y un gris.
+con el rojo se encuentra literalmente cuando no hicimos NADA, es decir 
+por ejemplo una carpeta con un archivo, iniciamos repositorio y ponemos 
+git status (comando para visualizar el estado de un archivo) nos encontra-
+mos con el rojo ya que no hicimos "git add"
+
+el verde aparece cuando realizamos "git add nombre del archivo", luego
+de haber realizado ese comando, git status y vemos que ya sale en verde.
+signfica que el archivo ya esta listo para hacer git push
+
+y por ultimo el gris nos lo encontramos cuando hacemos git push origin main
+significa que el archivo YA esta subido al repositorio.
